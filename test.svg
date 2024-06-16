@@ -1,2 +1,12 @@
-<svg xmlns="http://www.w3.org/2000/svg" onload="alert('XSS')">
+<svg width="200" height="100" xmlns="http://www.w3.org/2000/svg">
+  <circle id="circle2" cx="50" cy="50" r="25" style="fill:red;">
+  Sorry, your browser does not support inline SVG.
 </svg>
+
+<input type="button" value="Change Style" onclick="changeStyle()" />
+
+<script>
+function changeStyle() {
+  document.getElementById("circle2").style.fill="green";
+}
+</script>
